@@ -1,2 +1,10 @@
 # context-based-vimrc
-Try to make a context based vimrc
+
+
+VIMを使いたい状況は色々ある。
+サーバで設定ファイルを触る時、
+PHPを書く時、HTMLを書く時。
+デスクトップでドキュメントを書く時とか。
+
+## 設定ファイルでコンテクストを切り替える
+
