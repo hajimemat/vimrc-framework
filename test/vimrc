@@ -1,0 +1,7 @@
+scriptencoding utf-8 " 設定ファイルの文字コードを宣言
+
+let g:nora_vim_source_path = './'
+
+nnoremap <buffer> <C-R> :<C-u>source vimrc<CR>
+
+source vimrc
