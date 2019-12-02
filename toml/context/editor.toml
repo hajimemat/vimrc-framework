@@ -1,0 +1,79 @@
+# --------------------------
+# 整形
+# --------------------------
+#
+# 整列
+#
+[[plugins]]
+repo = 'h1mesuke/vim-alignta.git'
+on_cmd = ['Align', 'Alignta']
+#
+# コメントトグル
+#
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+#
+# 囲む
+#
+[[plugins]]
+repo = 'tpope/vim-surround'
+#
+# --------------------------
+# 拡張
+# --------------------------
+#
+# 選択範囲
+#
+[[plugins]]
+repo = 'terryma/vim-expand-region'
+hook_add = '''
+    call LoadSource('default/vim-expand-region.vim')
+'''
+# 移動
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+hook_add = '''
+    call LoadSource('default/vim-easymotion.vim')
+'''
+# 移動
+[[plugins]]
+repo = 'yuttie/comfortable-motion.vim'
+hook_add = '''
+let g:comfortable_motion_interval = 2400.0 / 60
+let g:comfortable_motion_friction = 100.0
+let g:comfortable_motion_air_drag = 3.0
+'''
+# 自動でペアを入力する
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+#
+# シンタックス詰め合わせ
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+#
+# --------------------------
+# NERDTree
+# --------------------------
+#
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+'''
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+hook_add = '''
+'''
+#
+# --------------------------
+# GIT
+# --------------------------
+#
+# 参考
+# - http://wakame.hatenablog.jp/entry/2017/05/03/222511
+#
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+[[plugins]]
+repo = 'vim-scripts/gitvimrc.vim'

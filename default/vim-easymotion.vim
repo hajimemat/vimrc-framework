@@ -1,0 +1,6 @@
+map    <Leader>j   <Plug>(easymotion-bd-w)
+nmap   <Leader>j   <Plug>(easymotion-overwin-w)
+map    <Leader>l   <Plug>(easymotion-bd-jk)
+nmap   <Leader>l   <Plug>(easymotion-overwin-line)
+map    <Leader>k   <Plug>(easymotion-bd-f)
+nmap   <Leader>k   <Plug>(easymotion-overwin-f)

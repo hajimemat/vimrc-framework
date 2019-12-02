@@ -1,0 +1,4 @@
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+[[plugins]]
+repo = 'godlygeek/tabular'

@@ -2,6 +2,7 @@
 
 VIMの設定を効率よく変更する為に、フレームワーク化する
 
+
 ## 要求
 
 1. VIMを使いたい状況は色々ある。
@@ -109,9 +110,68 @@ end
 @enduml
 ```
 
+### Context: editor
+
+コンセプト: エディターツールとしての便利セット
+
+```plantuml
+rectangle minimal << Context >>{
+}
+rectangle editor << Context >>{
+package ファイラー {
+    [NERDTree]
+}
+package 整形ツール群 {
+}
+}
+minimal <|-- editor : 継承
+```
+#### 基本ツール
+
+* * h1mesuke/vim-alignta.git
+  * 整列
+* * tomtom/tcomment_vim
+  * コメントトグル
+* * tpope/vim-surround
+  * 囲む
+* * terryma/vim-expand-region
+  * 選択範囲を増やす
+* * easymotion/vim-easymotion
+  * ショートカットで移動する
+* * yuttie/comfortable-motion.vim
+  * スクロールをスムーズ
+* * sheerun/vim-polyglot
+  * シンタックス詰め合わせ
+* * jiangmiao/auto-pairs
+  * 自動でペアを入力する
+  
+#### NERDTree
+
+* * scrooloose/nerdtree
+* * Xuyuanp/nerdtree-git-plugin
+
+#### Git
+
+参考: http://wakame.hatenablog.jp/entry/2017/05/03/222511
+
+* * airblade/vim-gitgutter
+* * tpope/vim-fugitive
+* * vim-scripts/gitvimrc.vim
+
+#### Markdown
+
+* * plasticboy/vim-markdown
+  * Tocコマンドでヘッダのアウトライン表示
+* * godlygeek/tabular
+  * テーブルフォーマット
+ 
 ### Context: full
 
 フルパッケージ
+
+### Context: desktop
+
+デスクトップ利用前提
 
 ## フレーバ設計
 
@@ -119,9 +179,13 @@ end
 
 デフォルトだと思うキーマップ設定
 
+### Flavor: nora
+
+Nora開発のデフォルトキーマップ
+
 ### Flavor: hajimemat
 
-`Flavor: default`にカラースキーマ`nanotech/jellybeans.vim`を追加
+`Flavor: nora`にカラースキーマ`nanotech/jellybeans.vim`を追加
 
 ## 課題
 
