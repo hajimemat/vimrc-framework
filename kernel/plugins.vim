@@ -31,14 +31,12 @@ endif
 "
 " リアルタイム読み込み
 function! LoadToml(name)
-echo a:name
-  call dein#load_toml(expand(g:nora_vim_source_path).'/context/toml/'.a:name.'.toml', {'lazy' : 0})
+  call dein#load_toml(expand(g:nora_vim_source_path).'/toml/'.a:name.'.toml', {'lazy' : 0})
 endfunction
 "
 " LazyLoad対応
 function! LazyLoadToml(name)
-echo a:name
-  call dein#load_toml(expand(g:nora_vim_source_path).'/context/toml/'.a:name.'.toml', {'lazy' : 1})
+  call dein#load_toml(expand(g:nora_vim_source_path).'/toml/'.a:name.'.toml', {'lazy' : 1})
 endfunction
 "
 " # 実行

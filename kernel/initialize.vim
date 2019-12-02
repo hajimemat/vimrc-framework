@@ -17,21 +17,17 @@ let has_python3  = has('python3') && executable('python3')
 " }}}
 "
 " 各種ディレクトリの設定をする {{{
+let g:var_dir = get(g:,'var_dir', '~/.vim')
 if has('nvim')
-  let g:dein_dir   = '~/.cache/nvim/dein'
-  let g:cache_dir  = '~/.cache/nvim/cache'
-  let g:backup_dir = '~/.cache/nvim/backup'
-  let g:tmp_dir    = '~/.cache/nvim/tmp'
-  let g:undo_dir   = '~/.cache/nvim/undo'
+  let g:var_dir = g:var_dir.'/nvim'
 else
-  let g:dein_dir      = '~/.cache/vim/dein'
-  let g:enable_denite = 0
-  let g:dein_dir      = '~/.cache/vim/dein'
-  let g:cache_dir     = '~/.cache/vim/cache'
-  let g:backup_dir    = '~/.cache/vim/backup'
-  let g:tmp_dir       = '~/.cache/vim/tmp'
-  let g:undo_dir      = '~/.cache/vim/undo'
+  let g:var_dir = g:var_dir.'/vim'
 end
+let g:dein_dir      = g:var_dir.'/dein'
+let g:cache_dir     = g:var_dir.'/cache'
+let g:backup_dir    = g:var_dir.'/backup'
+let g:tmp_dir       = g:var_dir.'/tmp'
+let g:undo_dir      = g:var_dir.'/undo'
 " }}}
 "
 " 起動時に一度だけ行う処理 {{{

@@ -1,0 +1,19 @@
+# 
+# FZF
+#
+# - https://qiita.com/Sa2Knight/items/6635af9fc648a5431685
+# - https://meteora.work/vim-dein-fzf
+[[plugins]]
+repo = "junegunn/fzf.vim"
+[[plugins]]
+repo = "junegunn/fzf"
+build = './install --all'
+hooks_add = '''
+let g:fzf_action = {
+    \ 'ctrl-t': 'tab split',
+    \ 'ctrl-x': 'split',
+    \ 'ctrl-v': 'vsplit',
+    \ 'ctrl-o': '!open'
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+'''
