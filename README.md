@@ -49,11 +49,12 @@ Flavorはキーマップ、見た目の設定を中心に設計する。
 - オートコマンドグループ名は`NoraAutoCmd`とする
 - 新しいコンテキストを設計する場合は、READMEに追記する
 - 新しいフレーバを設計する場合は、READMEに追記する
-- コンテキストをまたいで使用される設定はKernelに追加する
+- 
 
 ### ファイル構成
 
 ```plantuml
+@startuml
 salt
 {
   {T
@@ -66,11 +67,13 @@ salt
     + ./bin/ <- ユーティリティ
   }
 }
+@enduml
 ```
 
 ### プロセス
 
 ```plantuml
+@startuml
 start
 partition kernel/initialize.vim {
   :環境判定;
@@ -88,6 +91,7 @@ partition kernel/plugins.vim {
   :dein終了処理をおこなう;
 }
 end
+@enduml
 ```
 
 ## コンテキスト設計
@@ -98,7 +102,9 @@ end
     最小限の設定で立ち上げる
 
 ```plantuml
+@startuml
 [minimal.vim] - [fzf <<ファイラー>>]
+@enduml
 ```
 
 ### Context: full
