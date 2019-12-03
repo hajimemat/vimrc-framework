@@ -8,5 +8,5 @@ ${HOME}/.config/nvim/init.vim: ${HOME}/.config/nvim
 	ln -sf $(realpath nvim.init) $@
 ${HOME}/.vimrc:
 	ln -sf $(realpath vimrc) $@
-${HOME}/.vimrc.local
+${HOME}/.vimrc.local:
 	cp -v $(realpath vimrc.local.dist) $@

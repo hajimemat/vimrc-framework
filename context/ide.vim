@@ -25,6 +25,3 @@ endif
 
 " IDE用の設定を読み込む
 call LoadSource('config/ide.vim')
-
-echo 'IDE mode'
-
