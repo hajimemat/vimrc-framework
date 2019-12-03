@@ -5,7 +5,7 @@
 # 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
-on_cmd = 'NERDTreeToggle'
+on_cmd = ['NERDTree', 'NERDTreeToggle']
 hook_add = '''
 '''
 [[plugins]]

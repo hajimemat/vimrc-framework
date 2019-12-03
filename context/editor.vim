@@ -14,6 +14,7 @@ call LoadSource('context/minimal.vim')
 
 " TOML
 call LoadToml('context/editor')
+call LoadToml('nerdtree')
 
 if (g:nora_vim_enable_markdown)
     call LoadToml('markdown')
