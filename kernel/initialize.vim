@@ -50,5 +50,3 @@ if !exists('g:loaded_vimrc_init')
 endif
 " }}}
 "
-" プラグインに依存しない
-call LoadSource('config/default.vim')

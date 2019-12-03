@@ -1,0 +1,14 @@
+#
+# --------------------------
+# NERDTree
+# --------------------------
+# 
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+on_cmd = 'NERDTreeToggle'
+hook_add = '''
+'''
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+hook_add = '''
+'''

@@ -1,9 +1,14 @@
 scriptencoding utf-8 " 設定ファイルの文字コードを宣言
 
-let g:nora_vim_source_path = './'
-let g:nora_vim_contexts = ['editor', 'desktop']
+let g:nora_vim_source_path = '~/vimrc-framework'
+let g:nora_vim_contexts = ['ide', 'desktop']
 let g:nora_vim_flavor = 'hajimemat'
+let g:nora_vim_context_stability = 'dev'
+let g:nora_vim_enable_nerdtree = 1
+
+let g:python_host_prog = expand('~/.pyenv/versions/2.7.14/bin/python')
+let g:python3_host_prog = expand('~/.pyenv/versions/3.7.5/bin/python3')
 
 nnoremap <buffer> <C-R> :<C-u>source vimrc<CR>
 
-source vimrc
+execute expand('source '.g:nora_vim_source_path.'/vimrc')

@@ -33,16 +33,16 @@ execute 'nmap '.g:nora#subleader.'   <SUBNORA>'
 execute 'vmap '.g:nora#subleader.'   <SUBNORA>'
 map <NORA>s <SUBNORA>
 
-if dein#tap('tcomment_vim') " TComment {{{
-  let g:tcomment_maps = 0
-  nnoremap <silent><NORA>co :TComment<CR>
-  vmap <silent><NORA>co :TComment<CR>
-endif " }}}
+" <PHPACTOR>へのマップ
+execute 'au NoraAutoCmd FileType php map <buffer> <M-'.g:nora#subleader.'> <Leader>'
+execute 'au NoraAutoCmd FileType markdown map <buffer> <M-'.g:nora#subleader.'> <Leader>'
 
-if dein#tap('nerdtree') " NERDTree {{{
-  map <SUBNORA>e :<C-u>NERDTreeToggle<CR>
-  map <SUBNORA><s-e> :<C-u>NERDTreeFind<CR>
-endif " }}}
+let g:tcomment_maps = 0
+nnoremap <silent><NORA>co :TComment<CR>
+vmap <silent><NORA>co :TComment<CR>
+
+map <SUBNORA>e :<C-u>NERDTreeToggle<CR>
+map <SUBNORA><s-e> :<C-u>NERDTreeFind<CR>
 
 " <NORA>{f,h,b,m,a,l}を定義
 if dein#tap('fzf') " FZF {{{

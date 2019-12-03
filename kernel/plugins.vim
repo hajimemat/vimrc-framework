@@ -46,8 +46,13 @@ call dein#begin(s:dein_dir)
 call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 " コンテクスト別の処理
 for s:name in g:nora_vim_contexts
-  let file = 'context/'.s:name.'.vim'
-  call LoadSource(file)
+  let file = 'context/'.s:name.'-'.g:nora_vim_context_stability.'.vim'
+  if filereadable(expand(g:nora_vim_source_path).'/'.file) 
+      call LoadSource(file)
+  else
+      let file = 'context/'.s:name.'.vim'
+      call LoadSource(file)
+  endif
 endfor
 " フレーバー処理
 let file = 'flavor/'.g:nora_vim_flavor.'.vim'

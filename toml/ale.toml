@@ -1,0 +1,9 @@
+# ALE
+#
+# https://mattn.kaoriya.net/software/lang/go/20190205190203.htm
+#
+[[plugins]]
+repo = 'dense-analysis/ale'
+hook_add = '''
+call LoadSource('default/ale.vim')
+'''

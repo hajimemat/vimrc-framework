@@ -46,23 +46,13 @@ let g:comfortable_motion_air_drag = 3.0
 # 自動でペアを入力する
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
+hook_add = '''
+au FileType php let b:AutoPairs = AutoPairsDefine({}, ['<?php', '<?'])
+'''
 #
 # シンタックス詰め合わせ
 [[plugins]]
 repo = 'sheerun/vim-polyglot'
-#
-# --------------------------
-# NERDTree
-# --------------------------
-#
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-'''
-[[plugins]]
-repo = 'Xuyuanp/nerdtree-git-plugin'
-hook_add = '''
-'''
 #
 # --------------------------
 # GIT
@@ -77,3 +67,17 @@ repo = 'airblade/vim-gitgutter'
 repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'vim-scripts/gitvimrc.vim'
+#
+# --------------------------
+# reStructuredText
+# --------------------------
+#
+# 参考
+# - https://qh73xebitbucketorg.readthedocs.io/ja/latest/2.Tools/vim/plugin/riv/
+[[plugins]]
+repo = 'Rykka/clickable.vim'
+on_ft= 'rst'
+[[plugins]]
+repo = 'Rykka/riv.vim'
+on_ft= 'rst'
+depends = ['Rykka/clickable.vim']

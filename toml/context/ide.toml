@@ -1,0 +1,41 @@
+#
+# --------------------------
+# プロジェクト管理
+# --------------------------
+#
+[[plugins]]
+repo = 'airblade/vim-rooter'
+hook_add = '''
+let g:rooter_patterns = ['.git/', '.phpactor.yml']
+'''
+#
+# --------------------------
+# シンタックスチェック
+# --------------------------
+#
+[[plugins]]
+repo = 'dense-analysis/ale'
+#
+# --------------------------
+# 補完
+# --------------------------
+#
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_i = 1
+hook_add = '''
+let g:deoplete#enable_at_startup = 1
+'''
+#
+# --------------------------
+# スニペット
+# --------------------------
+#
+[[plugins]]
+repo = 'SirVer/ultisnips'
+on_i = 1
+hook_add = '''
+call LoadSource('default/ultisnips.vim')
+'''
+[[plugins]]
+repo = 'honza/vim-snippets'

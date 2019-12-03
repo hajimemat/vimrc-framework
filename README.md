@@ -2,6 +2,15 @@
 
 VIMの設定を効率よく変更する為に、フレームワーク化する
 
+## インストール方法
+
+```sh
+git clone https://github.com/hajimemat/vimrc-framework .vimrc-framework
+cd ~/.vimrc-framework && make
+```
+### カスタマイズ
+
+``~/.vimrc.local`` を編集する
 
 ## 要求
 
@@ -43,7 +52,20 @@ Flavorはキーマップ、見た目の設定を中心に設計する。
 
 どちらからも `toml/context` もしくは `toml/flavor` を利用できるものとする。
 
+### Stability
 
+Contextに導入Stabilityを設定できる。
+通常はstableを指定。
+挙動としては、Context読み込み時に、Context名-{stability}.vimを読み込む。
+
+| 変数名                     | 型     | 内容                |
+|----------------------------|:------:|---------------------|
+| `g:nora_context_stability` | string | Stabilityを設定する |
+
+| Stability | 目的   |
+|-----------|--------|
+| stable    | 安定   |
+| dev       | 開発用 |
 
 ## 詳細設計
 
@@ -165,13 +187,24 @@ minimal <|-- editor : 継承
 * * godlygeek/tabular
   * テーブルフォーマット
  
-### Context: full
-
-フルパッケージ
-
 ### Context: desktop
 
 デスクトップ利用前提
+
+
+#### プレビュー環境
+
+(参考)[https://github.com/iamcco/markdown-preview.nvim]
+
+* * junegunn/goyo.vim
+* * tyru/open-browser.vim
+  * VIからブラウザを開く為のプラグイン
+* * iamcco/markdown-preview.nvim
+  * マークダウンをリアルタイムに確認するプラグイン
+
+### Context: ide
+
+開発ツールとして使う場合
 
 ## フレーバ設計
 

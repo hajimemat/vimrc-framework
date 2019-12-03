@@ -1,0 +1,14 @@
+#
+# PHP開発環境
+#
+# https://mattn.kaoriya.net/software/lang/go/20190205190203.htm
+#
+[[plugins]]
+repo = 'phpactor/phpactor'
+build = 'composer install'
+hook_add = '''
+call LoadSource('default/phpactor.vim')
+'''
+[[plugins]]
+repo = 'kristijanhusak/deoplete-phpactor'
+on_ft = ['php']

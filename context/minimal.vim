@@ -6,6 +6,3 @@ scriptencoding = utf-8
 "
 " TOML
 call LoadToml('context/minimal')
-"
-" キーマップ
-nnoremap <C-p> :FZFFileList<CR>
