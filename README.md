@@ -41,7 +41,7 @@ cd ~/.vimrc-framework && make
 ### プラグインの利用
 
 1. `default/プラグイン名.vim`にインストールと基本的な設定を記述する
-1. 使用したい`contex/コンテキスト名.vim`で`LoadSource('プラグイン名')`で呼び出す
+1. 使用したい`context/コンテキスト名.vim`で`LoadSource('プラグイン名')`で呼び出す
 
 ### ContextとFlavor
 
@@ -86,7 +86,7 @@ salt
     + ./nvim.init <- nvim用のエントリーポイント
     + ./vimrc
     + ./config/ <- 設定置場
-    + ./context/ <- コンテクスト置場
+    + ./context/ <- コンテキスト置場
     + ./flavor/ <- フレーバー置場
     + ./kernel/ <- 共通処理置場
     + ./bin/ <- ユーティリティ
