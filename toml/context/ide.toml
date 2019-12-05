@@ -39,3 +39,14 @@ call LoadSource('default/ultisnips.vim')
 '''
 [[plugins]]
 repo = 'honza/vim-snippets'
+#
+# --------------------------
+# Quickrun
+# --------------------------
+#
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+on_ft = ['php', 'php.unit']
+hook_add = '''
+call LoadSource('default/quickrun.vim')
+'''

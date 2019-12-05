@@ -65,8 +65,8 @@ repo = 'sheerun/vim-polyglot'
 repo = 'airblade/vim-gitgutter'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-[[plugins]]
-repo = 'vim-scripts/gitvimrc.vim'
+# [[plugins]]
+# repo = 'vim-scripts/gitvimrc.vim'
 #
 # --------------------------
 # reStructuredText
