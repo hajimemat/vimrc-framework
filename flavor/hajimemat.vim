@@ -51,8 +51,8 @@ call LoadToml('flavor/hajimemat')
 " }}}
 
 " 見た目 {{{
-" au NoraAutoCmd VimEnter * nested colorscheme jellybeans
-au NoraAutoCmd VimEnter * nested colorscheme hybrid
+au NoraAutoCmd VimEnter * nested colorscheme jellybeans
+" au NoraAutoCmd VimEnter * nested colorscheme hybrid
 " au MyAutoCmd BufReadPost markdown map <NORA><C-s> :aaaaaa
 let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#left_sep = ' '

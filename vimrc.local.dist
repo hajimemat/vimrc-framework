@@ -1,5 +1,2 @@
 scriptencoding utf-8 " 設定ファイルの文字コードを宣言
 
-let g:nora_vim_source_path = '~/.vimrc-framework'
-let g:nora_vim_contexts = ['ide', 'desktop']
-let g:nora_vim_flavor = 'hajimemat'

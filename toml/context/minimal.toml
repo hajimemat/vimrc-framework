@@ -5,9 +5,9 @@
 # - https://meteora.work/vim-dein-fzf
 [[plugins]]
 repo = "junegunn/fzf.vim"
+hook_add = '''
+   call LoadSource('default/fzf.vim')
+'''
 [[plugins]]
 repo = "junegunn/fzf"
-build = './install --all'
-hook_add = '''
-    call LoadSource('default/fzf.vim')
-'''
+build = 'cd ~/.shellter/var/repo/fzf && ./install'
