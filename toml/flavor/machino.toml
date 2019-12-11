@@ -1,0 +1,19 @@
+# カラーテーマ
+[[plugins]]
+repo = 'nanotech/jellybeans.vim'
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+# インデントラインを表示する
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+# Powerline
+# [[plugins]]
+# repo = 'Lokaltog/vim-powerline'
+# # NERDTreeにアイコンを表示する
+# [[plugins]]
+# repo = 'ryanoasis/vim-devicons'
+# vim-airline
+# [[plugins]]
+# repo = 'vim-airline/vim-airline'
+# [[plugins]]
+# repo = 'vim-airline/vim-airline-themes'
