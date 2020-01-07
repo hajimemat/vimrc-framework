@@ -11,3 +11,11 @@ hook_add = '''
 [[plugins]]
 repo = "junegunn/fzf"
 build = 'cd ~/.shellter/var/repo/fzf && ./install'
+[[plugins]]
+repo = "glidenote/memolist.vim"
+hook_add = '''
+   let g:memolist_path = "~/MyDrive/Memo"
+   nnoremap <Leader>mn  :MemoNew<CR>
+   nnoremap <Leader>ml  :MemoList<CR>
+   nnoremap <Leader>mg  :MemoGrep<CR>
+'''
